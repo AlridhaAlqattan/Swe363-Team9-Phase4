@@ -1,5 +1,6 @@
 import "./Login.css";
 import img from '../assets/building.jpeg';
+import Sidebar from "../components/Sidebar";
 function Login() {
     
     function handleSubmit(event){
@@ -8,6 +9,7 @@ function Login() {
 
     }
     return (
+        <><Sidebar id="Sidebar" />
         <div id="LoginContainer">
             <div id="LoginBlock">
                 <span style={{fontSize:"25px"}} >Welcome back</span>
@@ -29,6 +31,7 @@ function Login() {
                 <img id="sideImg" src={img} alt="Picture of a KFUPM building" />
             </div>
         </div>
+        </>
 
     );
 
