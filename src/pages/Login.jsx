@@ -9,7 +9,8 @@ function Login() {
 
     }
     return (
-        <><Sidebar id="Sidebar" />
+        <><div style={{backgroundColor:"green",color:"white",height:"2rem",fontWeight:"bold"}}>ACCESS / Secure Login</div>
+        <Sidebar role="Admin" id="Sidebar" elms={[{ link: "first", name: "First"},{link:"second",name:"Second"}]} />
         <div id="LoginContainer">
             <div id="LoginBlock">
                 <span style={{fontSize:"25px"}} >Welcome back</span>

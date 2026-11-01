@@ -1,0 +1,40 @@
+#SidebarHeaderBox {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5rem;
+    background-color: rgb(234, 238, 234) ;
+    opacity: 0.9;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.btn.Elements {
+    display: flex;
+    color: black;
+    background-color: lightgrey;
+    border: white;
+    font-weight:bold;
+    opacity: 0.6;
+}
+.btn.Elements:hover {
+    background-color: rgb(53, 146, 53);
+    opacity:0.9;
+}
+.btn.Elements:active {
+    background-color: rgb(205, 244, 205);
+    color: rgb(48, 141, 48) ;
+    opacity:0.8;
+}
+
+#ShowSideBar {
+    background-color:lightgrey ;
+    border:white ;
+    color:black; 
+}
+
+#ShowSideBar:hover {
+    background-color:rgb(135, 202, 135);
+
+}
