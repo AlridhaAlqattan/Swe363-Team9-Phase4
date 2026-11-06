@@ -74,9 +74,10 @@
 
 #loginHeader {
     background-color: rgb(2, 104, 92);
-    color: white;
-    maxHeight: "3vh";
-    fontWeight: "bold"
+    color: rgb(221, 228, 221);
+    max-height: 4vh;
+    font-weight: bold;
+    padding:0.5%;
 }
 
 @media screen and (width: 768px) {

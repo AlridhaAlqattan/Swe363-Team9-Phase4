@@ -1,6 +1,5 @@
 import "./Login.css";
 import img from '../assets/building.jpeg';
-import Sidebar from "../components/Sidebar";
 function Login() {
     
     function handleSubmit(event){
