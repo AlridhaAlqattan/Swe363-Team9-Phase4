@@ -9,13 +9,13 @@ function Login() {
 
     }
     return (
-        <><div style={{backgroundColor:"green",color:"white",height:"2rem",fontWeight:"bold"}}>ACCESS / Secure Login</div>
-        <Sidebar role="Admin" id="Sidebar" elms={[{ link: "first", name: "First"},{link:"second",name:"Second"}]} />
+        <><div id="loginHeader" >ACCESS / Secure Login</div>
         <div id="LoginContainer">
             <div id="LoginBlock">
                 <span style={{fontSize:"25px"}} >Welcome back</span>
+                <span style={{opacity:"0.6"}}>Sign in to your account to access the system</span>
                 
-                <form onSubmit={handleSubmit}>
+                <form id="loginForm" onSubmit={handleSubmit}>
                     
                         <div className="Field">
                     <label htmlFor="email" >Work Email</label>
@@ -26,10 +26,14 @@ function Login() {
                     <input id="signIn" type="submit" value="Sign in"/>
                     
                 </form>
+                <a href="/passwordRecovery" style={{color:"green",textDecoration:"none"}} >Forgot your password?</a>
                 
             </div>
             <div id="imgBlock">
                 <img id="sideImg" src={img} alt="Picture of a KFUPM building" />
+                <span style={{color:"white",position:"absolute",zIndex:"4",fontWeight:"Bold",fontSize:"2vw",top:"7%",left:"2%"}}>Maintenance</span>
+                <span style={{color:"white",position:"absolute",zIndex:"4",fontWeight:"Bold",fontSize:"1vw",bottom:"13%",left:"2%"}}>KFUPM - Buidling Maintenance</span>
+                <span style={{color:"white",position:"absolute",zIndex:"4",fontWeight:"Bold",fontSize:"2vw",bottom:"7%",left:"2%"}}>Better buildings. Better Lives.</span>
             </div>
         </div>
         </>
