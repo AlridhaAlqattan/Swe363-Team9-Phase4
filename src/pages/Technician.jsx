@@ -1,6 +1,6 @@
 import Sidebar from "../components/Sidebar";
 import "./Technician.css";
-
+import AssignedReports from "../components/AssignedReports";
 
 function Technician() {
     
@@ -15,6 +15,8 @@ function Technician() {
                 {name:"View pending reports",link:"/pendingReports"},
               {name:"View assigned reports",link:"/assignedReports"}
               ]} />
+
+              <AssignedReports />
 
 
 

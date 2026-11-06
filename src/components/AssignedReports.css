@@ -1,0 +1,9 @@
+#assignedReportsContainer {
+    display: flex;
+    justify-content: top;
+    align-items: top;
+    flex-direction: column;
+    width:50%;
+    border: 1px solid grey;
+    
+}
