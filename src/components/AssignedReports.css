@@ -3,7 +3,16 @@
     justify-content: top;
     align-items: top;
     flex-direction: column;
-    width:50%;
+    width: 100%;
     border: 1px solid grey;
+    margin: 10px;
     
+}
+
+Card#assignedReportsCard {
+    width: 100%;
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(182, 209, 182);
 }
