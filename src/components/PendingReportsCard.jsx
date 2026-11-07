@@ -1,10 +1,12 @@
 import { Table, Form, Badge, Button, Card } from 'react-bootstrap';
-import "./assignedReports.css";
+import "./PendingReportsCard.css";
 import { useState } from 'react';
 import {Link} from 'react-router-dom';
+import {FaClock,FaCheck, FaCheckCircle} from 'react-icons/fa';
 
 
-function AssignedReports() {
+
+function PendingReportsCard() {
     const [reports, setReports] = useState([
         { id: "1", name: "Report1", priority: "High", reporter: "Person1", building: "101", status: "Pending", view: "View" },
         { id: "2", name: "Report2", priority: "Medium", reporter: "Person2", building: "102", status: "Resolved", view: "View" },
@@ -34,12 +36,19 @@ function AssignedReports() {
         else if (priority == "Low") { return <Badge bg="success" >Low</Badge> }
     }
 
+
+    const statusBadge = status => {
+        if (status == "Pending") { return <Badge bg="secondary" ><FaClock /> Pending</Badge> }
+        else if (status == "Assigned") { return <Badge bg="info"><FaCheck /> Assigned</Badge> }
+        else if (status == "Resolved") { return <Badge bg="success" ><FaCheckCircle /> Resolved</Badge> }
+    }
+
     return (
         <div id="assignedReportsContainer">
 
 
 
-        <Card style={{width:"70%", borderRadius:"20px"}}>
+        <Card style={{width:"80%", borderRadius:"20px"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:"1rem",gap:"1rem"}}>
             <Form.Control placeholder="Search by report name of ID" value={search} onChange={(e) => setSearch(e.target.value)} />
             <Form.Select value={priority} onChange={(e) => setPriority(e.target.value)}>
@@ -70,12 +79,12 @@ function AssignedReports() {
                 <tbody>
                     {filteredReports.map((report) => (
                         <tr>
-                            <td>{report.id} - {report.name}</td>
+                            <td><span style={{opacity:0.6,fontStyle:"italic"}}>{report.id}</span><p>{report.name}</p></td>
                             <td>{priorityBadge(report.priority)}</td>
                             <td>{report.reporter}</td>
                             <td>{report.building}</td>
-                            <td>{report.status}</td>
-                            <td>{<Link to={`/pendingReports/${report.id}`}>View</Link>
+                            <td>{statusBadge(report.status)}</td>
+                            <td>{<Link style={{textDecoration:"none",color:"green",fontWeight:"bold"}} to={`/pendingReports/${report.id}`}>View →</Link>
                                 }</td>
                         </tr>
                     ))}
@@ -88,4 +97,4 @@ function AssignedReports() {
     )
 }
 
-export default AssignedReports;
+export default PendingReportsCard;

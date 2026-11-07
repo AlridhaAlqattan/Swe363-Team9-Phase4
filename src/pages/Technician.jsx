@@ -1,8 +1,8 @@
 import Sidebar from "../components/Sidebar";
 import "./Technician.css";
-import AssignedReports from "../components/AssignedReports";
 
 function Technician() {
+
     
     
     return (
@@ -12,11 +12,11 @@ function Technician() {
             id="TechSideBar"
              role="Technician"
               elms={[
-                {name:"View pending reports",link:"/pendingReports"},
-              {name:"View assigned reports",link:"/assignedReports"}
+                {name:"View pending reports",link:"PendingReports"},
+              {name:"View assigned reports",link:"AssignedReports"}
               ]} />
 
-              <AssignedReports />
+              <p style={{textAlign:"center", fontWeight:"bold",fontSize:"30px"}}>Check the Sidebar for available options.</p>
 
 
 

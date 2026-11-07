@@ -14,7 +14,7 @@ function Sidebar(props) {
 
     return (
         <>
-            <Button id="ShowSideBar" variant='primary' onClick={() => setShow(true)}>Show Side Panel</Button>
+            <Button id="ShowSideBar" variant='primary' onClick={() => setShow(true)}>☰</Button>
             <Offcanvas id={props.id} show={show} onHide={() => setShow(false)}>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title style={{fontWeight:"bold"}}><img src={icon} alt="Building icon" style={{width:"2.5rem", height:"2.5rem", borderRadius: "15%", marginRight:"1rem"}}  />Maintanence</Offcanvas.Title>
